@@ -77,7 +77,11 @@
       <Variable x:TypeArguments="x:String" Name="generatedEmail" />
       <Variable x:TypeArguments="x:String" Name="generatedPhone" />
       <Variable x:TypeArguments="x:String" Name="generatedCountryCode" />
-      <Variable x:TypeArguments="x:String" Default="C:\Users\Mihai Paul\Desktop\textFile.txt" Name="textFilePath" />
+      <Variable x:TypeArguments="x:String" Name="textFilePath">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;C:\Users\&quot;+Environment.UserName+&quot;\Desktop\textFile.txt&quot;" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
